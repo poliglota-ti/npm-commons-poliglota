@@ -1,0 +1,15 @@
+{
+  "name": "npm-commons-poliglota",
+  "version": "1.0.0",
+  "description": "common npm for Poliglota",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.poliglota.org/commons/npm-commons-poliglota.git"
+  },
+  "author": "farismendi",
+  "license": "MIT"
+}
