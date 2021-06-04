@@ -11,5 +11,8 @@
     "url": "http://gitlab.poliglota.org/commons/npm-commons-poliglota.git"
   },
   "author": "farismendi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3"
+  }
 }
