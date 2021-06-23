@@ -1,1 +1,1 @@
-new 
+new project NPM poliglota
