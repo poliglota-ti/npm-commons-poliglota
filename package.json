@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://gitlab.poliglota.org/commons/npm-commons-poliglota.git"
+    "url": "https://github.com/poliglota-ti/npm-commons-poliglota.git"
   },
   "author": "Sergio Azócar <sergioazoc@gmail.com>",
   "license": "MIT",
