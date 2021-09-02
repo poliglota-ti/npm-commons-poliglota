@@ -35,9 +35,9 @@ If you use `vue-cli` only need add this lines in `main.js` file.
 
 
 
-`import 'commons-poliglota-test/dist/css/main.css'`
+`import 'npm-commons-poliglota/dist/css/main.css'`
 
-`import 'commons-poliglota-test/dist/js/main.js'`
+`import 'npm-commons-poliglota/dist/js/main.js'`
 
 
 
