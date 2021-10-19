@@ -1,13 +1,21 @@
+// Fonts:
+// Titles: Montserrat 300, 400, 500, 600, 700
+// Paragraphs: Open Sans 400, 700
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 // Configuration Bootstrap
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
 // Customization Bootstrap
-$custom-colors: (
-  "poliglota": #17a572
-);
-$theme-colors: map-merge($theme-colors, $custom-colors);
+// $custom-colors: (
+//   "poliglota": #17a572
+// );
+// $theme-colors: map-merge($theme-colors, $custom-colors);
 
+// Font Family
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+$headings-font-family: Montserrat, sans-serif;
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";

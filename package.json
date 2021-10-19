@@ -1,6 +1,6 @@
 {
   "name": "npm-commons-poliglota",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "resources for frontend app's of poliglota",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "@popperjs/core": "^2.9.2",
     "autoprefixer": "^10.3.1",
     "babel-loader": "^8.2.2",
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.1.3",
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "mini-css-extract-plugin": "^2.1.0",
