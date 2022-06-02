@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "parser":"vue",
+  "vueIndentScriptAndStyle": true,
+  "printWidth": 120,
+  "jsxBracketSameLine": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "htmlWhitespaceSensitivity": "ignore"
+}
