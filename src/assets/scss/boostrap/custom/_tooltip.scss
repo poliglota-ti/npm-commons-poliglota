@@ -1,0 +1,46 @@
+.bs-tooltip-top {
+
+  .tooltip-arrow {
+    &::before {
+      border-top-color: white;
+    }
+  }
+}
+
+.bs-tooltip-end {
+  .tooltip-arrow {
+    &::before {
+      border-right-color: white;
+    }
+  }
+}
+
+.bs-tooltip-bottom {
+  .tooltip-arrow {
+    &::before {
+      border-bottom-color: white;
+    }
+  }
+}
+
+.bs-tooltip-start {
+  .tooltip-arrow {
+    &::before {
+      border-left-color: white;
+    }
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  background-color: white!important;
+  color: black!important;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+
+.tooltip{
+  &.show {
+    opacity: 1!important;
+  }
+}

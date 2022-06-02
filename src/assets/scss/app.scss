@@ -1,0 +1,84 @@
+// Import Fonts:
+// Titles: Montserrat 500, 600, 700
+// Paragraphs: Open Sans 400, 600, 700
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+@import "./boostrap";
+
+// alert
+.alert-success {
+  background-color: #edf8f4;
+}
+
+.alert-warning {
+  background-color: #fff9ec;
+}
+
+.alert-danger {
+  background-color: #fef2f3;
+}
+
+.alert-info {
+  background-color: #eef3fe;
+  color: #242a67;
+}
+
+// button
+.btn-primary {
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+  &:disabled {
+    color: #ffffff;
+  }
+}
+
+.btn-outline-primary {
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.text-gray-400 {
+  color: $gray-400;
+}
+
+.text-magenta {
+  color: #E33A71;
+}
+
+
+// helpers
+.initials {
+  background-color: #797979;
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+// main
+.main-content {
+  min-height: calc(100vh - 132px);
+}
+.referral-banner {
+  color: #ffffff;
+  background-color: #242a67;
+  a {
+    min-width: 102px;
+  }
+}

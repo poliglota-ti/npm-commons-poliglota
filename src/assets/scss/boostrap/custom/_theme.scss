@@ -1,0 +1,41 @@
+// Custom colors
+$white: #ffffff;
+$gray-100: #e9e9e9;
+$gray-200: #d2d2d2;
+$gray-300: #bcbcbc;
+$gray-400: #a5a5a5;
+$gray-500: #8e8e8e;
+$gray-600: #797979;
+$gray-700: #636363;
+$gray-800: #4c4c4c;
+$gray-900: #363636;
+$black: #1f1f1f;
+
+$primary: #19a572;
+$secondary: #dc094e;
+$success: #0f706a;
+$info: #242a67;
+$warning: #f7ac11;
+$danger: #a10707;
+$light: #f8f9fa;
+$dark: #212529;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "disabled": $gray-100,
+);
+
+$custom-colors: (
+  "poli-aqua": #3db6af,
+  "poli-blue": #242a67,
+  "poli-yellow": #f7ac11,
+  "poli-pink": #ea5b62,
+  "poli-black": #1f1f1f,
+);
