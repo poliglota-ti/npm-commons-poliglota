@@ -43,3 +43,9 @@ export { default as PButton } from "./buttons/PButton.vue"
 
 // navs
 export { default as PNav } from "./navs/PNav.vue"
+
+// ratings
+export { default as PStars } from "./ratings/PStars.vue"
+
+// tags
+export { default as PTag } from "./tags/Tag.vue"
