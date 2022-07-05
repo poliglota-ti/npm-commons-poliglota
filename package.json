@@ -1,7 +1,7 @@
 {
-  "name": "npm-commons-poliglota",
-  "version": "1.0.1",
-  "description": "resources for frontend app's of poliglota",
+  "name": "npm-commons-poliglota-alt",
+  "version": "0.0.17",
+  "description": "Resources for frontend app's of poliglota",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -22,7 +22,8 @@
   "author": "Sergio Azócar <sergioazoc@gmail.com>",
   "exports": {
     ".": "./dist/index.js",
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/style.css",
+    "./composables": "./dist/composables"
   },
   "browser": {
     "./styles.css": "./dist/style.css"
