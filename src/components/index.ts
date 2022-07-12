@@ -35,11 +35,12 @@ export { default as PAvatar } from "./avatars/PAvatar.vue"
 
 // cards
 export { default as PCard } from "./cards/PCard.vue"
+
+//breadcrumbs
+export { default as PBreadcrumb} from "./breadcrumbs/PBreadcrumb.vue"
+
 // buttons
 export { default as PButton } from "./buttons/PButton.vue"
-
-// modals
-// import { default as PModal } from "./modals/PModal.vue";
 
 // navs
 export { default as PNav } from "./navs/PNav.vue"
