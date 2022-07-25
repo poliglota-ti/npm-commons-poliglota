@@ -1,6 +1,6 @@
 {
   "name": "npm-commons-poliglota-alt",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Resources for frontend app's of poliglota",
   "type": "module",
   "main": "dist/index.cjs",
