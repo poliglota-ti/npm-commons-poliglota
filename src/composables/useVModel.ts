@@ -8,14 +8,14 @@ import type { WritableComputedRef } from "vue";
  * @param valueName el nombre de la propiedad que se usará par ael v-model, por  defecto es modelValue
  * @returns {WritableComputedRef<any>}
  */
-const useVModel = (valueName = "modelValue") => {
+const useVModel = <T>(valueName = "modelValue") => {
   const currentInstance = getCurrentInstance();
   const emit = currentInstance?.emit ?? (() => {});
   const props = currentInstance?.props ?? {}
 
-  const value = computed<any>({
+  const value = computed<T>({
     get() {
-      return props[valueName]
+      return <T>props[valueName]
     },
     set(value) {
       const emitName = `update:${valueName}`
