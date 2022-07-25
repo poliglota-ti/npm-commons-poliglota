@@ -1,10 +1,12 @@
 <script lang="ts" setup>
   import { useVModel } from '@/composables'
 
-  const props = defineProps<{
-    type: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'link'
-    toast?: boolean
-  }>()
+  interface Props {
+    modelValue: boolean
+  }
+  const props = withDefaults(defineProps<Props>(),{
+    modelValue: false
+  }) 
   const model = useVModel<boolean>()
 </script>
 
