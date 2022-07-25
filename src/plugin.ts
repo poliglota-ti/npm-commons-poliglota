@@ -1,7 +1,7 @@
 import type { App, DefineComponent } from "vue";
 import type { DashboardRoutesName } from "@/interfaces/IPlugin"
 // import { components } from "./components";
-import { PButton, PAlert, PAvatar, PNav, PCard, PStars, PTag, PBreadcrumb } from "./components";
+import { PButton, PAlert, PAvatar, PNav, PCard, PStars, PTag, PBreadcrumb, PCheckbox } from "./components";
 
 // composables
 import { useVModel } from "./composables";
@@ -42,5 +42,5 @@ export default {
 export { useVModel };
 
 // exportamos componentes uno por uno
-export { PButton, PAlert, PAvatar, PNav, PCard, PStars, PTag, PBreadcrumb };
+export { PButton, PAlert, PAvatar, PNav, PCard, PStars, PTag, PBreadcrumb, PCheckbox };
 // export const { PButton } = components

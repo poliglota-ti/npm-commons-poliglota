@@ -42,6 +42,9 @@ export { default as PBreadcrumb} from "./breadcrumbs/PBreadcrumb.vue"
 // buttons
 export { default as PButton } from "./buttons/PButton.vue"
 
+// forms
+export { default as PCheckbox } from "./form/PCheckbox.vue"
+
 // navs
 export { default as PNav } from "./navs/PNav.vue"
 
