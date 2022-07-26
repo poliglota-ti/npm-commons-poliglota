@@ -3,8 +3,9 @@
   const props = defineProps<{
     src?: string | null
     initials?: string | null
-    tooltipText?: string,
-    bordered?: boolean,
+    tooltipText?: string
+    bordered?: boolean
+    size?: string
   }>()
 
   let isImageError = ref(false)
@@ -17,19 +18,19 @@
 <template>
   <img
     v-if="props.src && !isImageError"
-    v-tooltip.top="props.tooltipText"
+    v-tooltip.top="{text: props.tooltipText, show: props.tooltipText }"
     :src="props.src"
     alt="avatar"
     class="avatar me-2 classmate-img"
-    :class="`${props.bordered? 'bordered': ''}`"
+    :class="`${props.bordered? 'bordered' : '' }`"
     data-testid="avatar-image"
     @error="onImageError"
   >
   <div 
     v-else
-    v-tooltip.top="props.tooltipText"
+    v-tooltip.top="{text: props.tooltipText, show: props.tooltipText }"
     class="initials"
-    :class="`${props.bordered? 'bordered': ''}`"
+    :class="`${props.bordered? 'bordered' : ''}`"
     data-testid="avatar-initials"
   >
     {{ props.initials }}
