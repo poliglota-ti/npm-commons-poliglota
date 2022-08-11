@@ -10,7 +10,7 @@ import { computed } from 'vue';
     modelValue: false
   }) 
   const model = useVModel<boolean>()
-  const elementId = computed(() => `checkbox_${Math.floor(Math.random() * 100) + 1}`)
+  const elementId = computed(() => `checkbox_${Math.floor(Math.random() * 100000) + 1}`)
 </script>
 
 <template>
