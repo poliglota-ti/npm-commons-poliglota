@@ -4,17 +4,17 @@ $headings-font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto,
   "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $h1-font-size: 3rem;
-$h2-font-size: 2rem;
-$h3-font-size: 1.5rem;
-$h4-font-size: 1.25rem;
-$h5-font-size: 1rem;
-$h6-font-size: 0.8rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 1rem;
 
 // headings
 h1,
 .h1 {
   font-weight: 700;
-  line-height: 55px;
+  line-height: 56px;
 }
 
 h2,
@@ -26,13 +26,25 @@ h2,
 h3,
 .h3 {
   font-weight: 700;
-  line-height: 36px;
+  line-height: 40px;
+}
+h3{
+  &.regular{
+    font-weight: 400;
+    line-height: 40px;
+  }
 }
 
 h4,
 .h4 {
   font-weight: 700;
-  line-height: 30px;
+  line-height: 32px;
+}
+h4{
+  &.regular{
+    font-weight: 400!important;
+    line-height: 32px;
+  }
 }
 
 h5,
@@ -44,25 +56,85 @@ h5,
 h6,
 .h6 {
   font-weight: 500;
-  line-height: 22px;
+  line-height: 20px;
+}
+h6{
+  &.regular{
+    font-weight: 400!important;
+    line-height: 20px;
+  }
+}
+.subtitle{
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 18px;
+}
+// custom typography classes
+// link: https://www.figma.com/file/XdVLSzve0vw5gyxOwuT1y9/Poli-Design-System?node-id=3%3A5
+.text{
+  &--button{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  &--caption{
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  &--link{
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+  &--overline{
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 12px;
+  }
+  &--overline-bold{
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 12px;
+  }
+  &--75{
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 56px;
+  }
 }
 
 // font-sizes
-.fs-xs {
-  font-size: 0.5rem; // 8px
-}
 
+// .fs-xs {
+//   font-size: 0.5rem; // 8px
+// }
 .fs-sm {
+  font-size: 400;
   font-size: 0.75rem; // 12px
+  line-height: 18px;
+  &--bold{
+    font-size: 700!important;
+  }
 }
 
 .fs-md {
-  font-size: 1rem; // 16px
+  font-size: 400;
+  font-size: 0.875rem; // 14px
+  line-height: 18px;
+  &--bold{
+    font-size: 700!important;
+  }
 }
 
-// .fs-lg {
-//   font-size: 0;
-// }
+.fs-lg {
+  font-size: 400;
+  font-size: 1rem; // 16px
+  line-height: 20px;
+  &--bold{
+    font-size: 700!important;
+  }
+}
 
 // .fs-xl {
 //   font-size: 0;
