@@ -35,7 +35,7 @@
   })
 
   const validateDashboardBreadcumb = () => {
-    if(dashboardRoutesName) console.error("you must initialize dashboardRoutesName in plugin options")
+    if(!dashboardRoutesName) console.error("you must initialize dashboardRoutesName in plugin options")
   }
   validateDashboardBreadcumb()
 </script>
