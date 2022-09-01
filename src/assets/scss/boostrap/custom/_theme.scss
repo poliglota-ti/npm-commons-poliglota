@@ -1,22 +1,168 @@
-// Custom colors
-$white: #ffffff;
-$gray-100: #e9e9e9;
-$gray-200: #d2d2d2;
-$gray-300: #bcbcbc;
-$gray-400: #a5a5a5;
-$gray-500: #8e8e8e;
-$gray-600: #797979;
-$gray-700: #636363;
-$gray-800: #4c4c4c;
-$gray-900: #363636;
-$black: #1f1f1f;
+// CUSTOM COLORS ACCORDING TO DESIGN SYSTEM
+$custom-colors: ();
 
+//COLOR: Primary (Figma)
 $primary: #19a572;
 $secondary: #dc094e;
-$success: #0f706a;
-$info: #242a67;
-$warning: #f7ac11;
-$danger: #a10707;
+$primaries: (
+  "default": (
+    "primary": $primary,
+    "secondary": $secondary
+  ),
+  "dark": (
+    "primary": #158C61,
+    "secondary": #C20845
+  )
+);
+$opacities: (
+  "80": 0.8,
+  "60": 0.6,
+  "40": 0.4,
+  "20": 0.2
+);
+//create primary colors with each opacity
+@each $type-name, $type-val in $primaries {
+  @if type-val == default {
+    @each $name, $val in $type-val {
+      @each $opacity-name, $opacity-val in $opacities {
+        //create name (example: primary-80)
+        $custom-name: $name+"-"+$opacity-name;
+        $custom-value: rgba($val, $opacity-val);
+        //add in custom-colors map
+        $custom-colors: map-merge($custom-colors, ($custom-name: $custom-value) );
+        //create custom background and text to color (example: bg-primary-80, text-primary-60)
+        .bg-#{$custom-name}{
+          background-color: $custom-value!important;
+        }
+        .text-#{$custom-name}{
+          color: $custom-value!important;
+        }
+      }
+    }
+  } @else {
+    @each $name, $val in $type-val {
+      //create name (example: primary-dark)
+      $custom-name: $name+"-"+$type-name;
+      $custom-value: $val;
+      //add in custom-colors map
+      $custom-colors: map-merge($custom-colors, ($custom-name: $custom-value) );
+      //create custom background and text to color (example: bg-primary-dark, text-primary-dark)
+      .bg-#{$custom-name}{
+        background-color: $custom-value!important;
+      }
+      .text-#{$custom-name}{
+        color: $custom-value!important;
+      }
+    }
+  }
+}
+
+// COLOR: Secondary (Figma)
+$green: #3DB6AF;
+$blue: #4653DF;
+$yellow: #F7AC11;
+$red: #EA5B62;
+$purple: #9949FE;
+
+$secondaries: (
+  "green": (
+    "default": $green,
+    "light": #D4F4F2,
+    "ultralight": #EEFAF9,
+    "dark": #16403D
+  ),
+  "blue": (
+    "default": $blue,
+    "light": #DDE0FD,
+    "ultralight": #ECEEFD,
+    "dark": #242A67
+  ),
+  "yellow": (
+    "default": $yellow,
+    "light": #FFF2D8,
+    "ultralight": #FFFBF2,
+    "dark": #722B03
+  ),
+  "red": (
+    "default": $red,
+    "light": #F9DEDF,
+    "ultralight": #FFF3F4,
+    "dark": #74011D
+  ),
+  "purple": (
+    "default": $purple,
+    "light": #F1E5FF,
+    "ultralight": #F9F4FF,
+    "dark": #30174F
+  )
+);
+// COLOR: Alerts (Figma)
+$success: #0F706A;
+$info: #242A67;
+$warning: #946709;
+$danger: #A10707;
+
+$alerts: (
+  "success": (
+    "default": $success,
+    "light": #EDF8F4
+  ),
+  "info": (
+    "default": $info,
+    "light": #EEF3FE
+  ),
+  "warning": (
+    "default": $warning,
+    "light": #FFF9EC
+  ),
+  "error": (
+    "default": $danger,
+    "light": #FEF2F3
+  )
+);
+
+// create secondary and alert colors dynamiclly
+$merged-colors: map-merge($secondaries, $alerts);
+@each $secondary-name, $secondary-val in $merged-colors {
+  @each $name, $val in $secondary-val {
+    //create name (example: green-light, red-ultralight, error-light )
+    $custom-name: '';
+    @if $name == default {
+      $custom-name: $secondary-name;
+    } @else {
+      $custom-name: $secondary-name+"-"+$name;
+    }
+    //add in custom-colors map
+    $custom-colors: map-merge($custom-colors, ($custom-name: $val) );
+    //create custom background and text to color (example: bg-primary-80, text-primary-60)
+    .bg-#{$custom-name}{
+      background-color: $val!important;
+    }
+    .text-#{$custom-name}{
+      color: $val!important;
+    }
+  }
+}
+
+// COLOR: Bluish Grey Scale (Figma)
+$gray-100: #FCFCFF;
+$gray-200: #F3F3FA;
+$gray-300: #E2E2EA;
+$gray-400: #C1C1CE;
+$gray-500: #9B9BA8;
+$gray-600: #797984;
+$gray-700: #575760;
+$gray-800: #38383F;
+$gray-900: #212127;
+
+// COLOR: Background (Figma)
+$whitebg: #F9F9F9;
+
+// COLOR: Neutral (Figma)
+$white: #ffffff;
+$black: #000000;
+
+//TODO: this colors isn't in figma
 $light: #f8f9fa;
 $dark: #212529;
 
@@ -29,13 +175,5 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-  "disabled": $gray-100,
-);
-
-$custom-colors: (
-  "poli-aqua": #3db6af,
-  "poli-blue": #242a67,
-  "poli-yellow": #f7ac11,
-  "poli-pink": #ea5b62,
-  "poli-black": #1f1f1f,
+  "disabled": $gray-300,
 );
