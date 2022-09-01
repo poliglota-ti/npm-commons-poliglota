@@ -115,3 +115,5 @@ typings/
 *.njsproj
 *.sln
 *.sw?
+
+src/views/**.vue
