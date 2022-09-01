@@ -21,19 +21,38 @@ $opacities: (
   "20": 0.2
 );
 //create primary colors with each opacity
-@each $primary-name, $primary-val in $primaries {
-  @each $opacity-name, $opacity-val in $opacities {
-    //create name (example: primary-80)
-    $custom-name: $primary-name+"-"+$opacity-name;
-    $custom-value: rgba($primary-val, $opacity-val);
-    //add in custom-colors map
-    $custom-colors: map-merge($custom-colors, ($custom-name: $custom-value) );
-    //create custom background and text to color (example: bg-primary-80, text-primary-60)
-    .bg-#{$custom-name}{
-      background-color: $custom-value!important;
+@each $type-name, $type-val in $primaries {
+  @if type-val == default {
+    @each $name, $val in $type-val {
+      @each $opacity-name, $opacity-val in $opacities {
+        //create name (example: primary-80)
+        $custom-name: $name+"-"+$opacity-name;
+        $custom-value: rgba($val, $opacity-val);
+        //add in custom-colors map
+        $custom-colors: map-merge($custom-colors, ($custom-name: $custom-value) );
+        //create custom background and text to color (example: bg-primary-80, text-primary-60)
+        .bg-#{$custom-name}{
+          background-color: $custom-value!important;
+        }
+        .text-#{$custom-name}{
+          color: $custom-value!important;
+        }
+      }
     }
-    .text-#{$custom-name}{
-      color: $custom-value!important;
+  } @else {
+    @each $name, $val in $type-val {
+      //create name (example: primary-dark)
+      $custom-name: $name+"-"+$type-name;
+      $custom-value: $val;
+      //add in custom-colors map
+      $custom-colors: map-merge($custom-colors, ($custom-name: $custom-value) );
+      //create custom background and text to color (example: bg-primary-dark, text-primary-dark)
+      .bg-#{$custom-name}{
+        background-color: $custom-value!important;
+      }
+      .text-#{$custom-name}{
+        color: $custom-value!important;
+      }
     }
   }
 }
