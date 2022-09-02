@@ -18,11 +18,12 @@ $opacities: (
   "80": 0.8,
   "60": 0.6,
   "40": 0.4,
-  "20": 0.2
+  "20": 0.2,
+  "5": 0.05
 );
 //create primary colors with each opacity
 @each $type-name, $type-val in $primaries {
-  @if type-val == default {
+  @if $type-name == default {
     @each $name, $val in $type-val {
       @each $opacity-name, $opacity-val in $opacities {
         //create name (example: primary-80)
