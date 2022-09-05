@@ -6,6 +6,7 @@ import { defineConfig } from "vite"
 
 import vue from "@vitejs/plugin-vue"
 import typescript2 from "rollup-plugin-typescript2"
+import dts from "vite-plugin-dts"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,9 +14,12 @@ export default defineConfig({
     vue({
       reactivityTransform: true,
     }),
+    dts({
+      insertTypesEntry: true,
+    }),
     typescript2({
       check: false,
-      include: ["src/components/*/*.vue"],
+      include: ["src/components/**/*.vue"],
       tsconfigOverride: {
         compilerOptions: {
           sourceMap: true,
@@ -28,10 +32,10 @@ export default defineConfig({
           "src/router.ts",
           "src/views/*.vue",
           "src/plugins/*.ts",
-          "*.test.ts",
+          "__test_/**/*.ts",
         ],
       },
-    }),
+    })
   ],
   test: {
     globals: true,
