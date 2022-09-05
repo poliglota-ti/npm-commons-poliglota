@@ -1,7 +1,7 @@
 import { describe,it, expect } from "vitest"
 import { shallowMount, config } from "@vue/test-utils"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
-import PButton from "../../src/components/buttons/PButton.vue"
+import PButton from "@/components/buttons/PButton.vue"
 // const PButton = defineComponent(()=> import("../../components/buttons/PButton.vue"))
 
 const createComponent = (data: any = {}) => shallowMount(PButton, data)
