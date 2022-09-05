@@ -15,8 +15,11 @@
 
   const dashboardRoutesName = injectStrict<DashboardRoutesName>("dashboardRoutesName")
 
+  interface Params {
+    [key: string]: string | string[]
+  }
   const dashboardItem = computed<BreadcrumbItem>(() => {
-    const params = <{ id?: string | string[] }>{}
+    const params: Params = {}
     if(props.memberId) params.id = props.memberId.toString()
 
     const to = {
@@ -39,6 +42,7 @@
   }
   validateDashboardBreadcumb()
 </script>
+
 <template>
   <nav
     style="--bs-breadcrumb-divider: '>';"
@@ -66,11 +70,12 @@
     </ol>
   </nav>
 </template>
+
 <style lang="scss">
   .nav-breadcrumbs {
     .breadcrumb-item {
       a{
-        color: var(--bs-poli-blue)!important;
+        color: var(--bs-blue-dark)!important;
         font-weight: 600;
       }
       &.active {
