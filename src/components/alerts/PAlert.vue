@@ -13,7 +13,7 @@
   >
     <div
       class="alert mb-0"
-      :class="{ 'alert-toast': props.toast },`alert-${props.type}`"
+      :class="[props.toast && 'alert-toast',`alert-${props.type}`]"
       role="alert"
       :data-toast="props.toast"
     >
