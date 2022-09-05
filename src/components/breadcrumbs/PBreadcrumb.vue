@@ -75,7 +75,7 @@
   .nav-breadcrumbs {
     .breadcrumb-item {
       a{
-        color: var(--bs-blue-dark)!important;
+        color: var(--bs-info)!important;
         font-weight: 600;
       }
       &.active {
