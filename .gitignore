@@ -116,4 +116,4 @@ typings/
 *.sln
 *.sw?
 
-src/views/**.vue
+src/views
