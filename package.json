@@ -1,6 +1,6 @@
 {
   "name": "npm-commons-poliglota-alt",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Resources for frontend app's of poliglota",
   "type": "module",
   "main": "dist/index.cjs",
@@ -31,7 +31,9 @@
     "./scss": "./dist/scss"
   },
   "browser": {
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/style.css",
+    "./scss/boostrap.scss": "./dist/scss/boostrap/index.scss",
+    "./scss/app.css": "./dist/scss/app.scss"
   },
   "types": "dist/plugin.d.ts",
   "files": [
