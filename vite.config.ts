@@ -7,6 +7,7 @@ import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import typescript2 from "rollup-plugin-typescript2"
 import dts from "vite-plugin-dts"
+import copy from 'rollup-plugin-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,15 @@ export default defineConfig({
     }),
     dts({
       insertTypesEntry: true,
+      exclude:[
+        "__test__/**/*.ts"
+      ]
+    }),
+    copy({
+      targets:[
+        { src: 'src/assets/scss/*', dest: 'dist/scss' }
+      ],
+      hook: 'writeBundle'
     }),
     typescript2({
       check: false,
