@@ -16,7 +16,7 @@
 </script>
 <template>
   <div
-    class="shadow-sm rounded d-flex gap-3 p-card"
+    class="rounded d-flex gap-3 p-card"
     :class="[props.backgroundColor, props.paddingClass, props.outlined && 'border', shadowComputed]"
   >
     <slot></slot>
