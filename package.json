@@ -31,9 +31,7 @@
     "./scss": "./dist/scss"
   },
   "browser": {
-    "./styles.css": "./dist/style.css",
-    "./scss/boostrap.scss": "./dist/scss/boostrap/index.scss",
-    "./scss/app.css": "./dist/scss/app.scss"
+    "./styles.css": "./dist/style.css"
   },
   "types": "dist/plugin.d.ts",
   "files": [
