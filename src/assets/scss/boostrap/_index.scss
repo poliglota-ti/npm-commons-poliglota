@@ -18,8 +18,11 @@ $offcanvas-transition-duration: 0.4s;
 
 @import "~bootstrap/scss/variables";
 
+$enable-dark-mode: false;
+
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+@import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/mixins";
 
